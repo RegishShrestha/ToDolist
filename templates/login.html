@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>_ToDo List_ | Log_in</title>
+</head>
+<style>
+    a{
+    text-decoration:none;
+    background:pink;
+    padding:1rem;
+    text-align: center;
+    width:30px;
+    }
+</style>
+<body>
+<form action="login" method="POST">
+    {% csrf_token %}
+    <p>Username</p>
+    <input type="text" name="username">
+    <p>Password</p>
+    <input type="password" name="password">
+    <input type="submit">
+    <a href="signup"> Sign Up</a>
+</form>
+</body>
+</html>

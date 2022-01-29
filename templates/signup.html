@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>_ToDo List_ | Sign_Up</title>
+</head>
+<style>
+body{
+    background:pink;
+    text-align: center;
+}
+.signup{
+    background:#fff;
+    padding:1.5rem;
+    text-align: center;
+    margin:auto;
+    width:30%;
+    border-radius:5px;
+}
+    a{
+    text-decoration:none;
+    background:pink;
+    padding:1rem;
+    text-align: center;
+    width:30px;
+    }
+</style>
+<body>
+<h1>_ToDo List_</h1>
+
+<div class="signup">
+    <h2>SignUp</h2><br>
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+    <form action="signup" method="POST">
+        {% csrf_token %}
+        <p>Username</p>
+        <input type="text" name="username">
+        <p>Email</p>
+        <input type="email" name="email">
+        <p>Password</p>
+        <input type="password" name="password">
+        <p>Rewrite Password</p>
+        <input type="password" name="password2"><br><br>
+        <input type="submit">
+
+    </form>
+    <p>Already have a account?</p>
+        <a href="login">Login</a>
+</div>
+</body>
+</html>
